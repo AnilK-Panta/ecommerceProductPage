@@ -582,11 +582,12 @@ body {
   line-height: 150%;
 }
 #writeReviewField {
+  cursor: pointer;
   background: #ffffff;
   border: 1px solid #e7eaef;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 185px;
+  width: auto;
   height: 37px;
   display: flex;
   flex-direction: row;
