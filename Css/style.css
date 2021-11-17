@@ -846,3 +846,18 @@ input::-webkit-inner-spin-button {
     display: none;
   }
 }
+@media (max-width: 460px) {
+  .productView img {
+    max-width: 100%;
+  }
+  .sidebarCard {
+    left: 2px;
+    bottom: 2px;
+  }
+  .contentWrap {
+    margin: 0px;
+  }
+  .relatedProductsCardsWrap {
+    width: calc(100vw - 10px);
+  }
+}
