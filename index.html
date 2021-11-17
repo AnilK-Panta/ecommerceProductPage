@@ -453,9 +453,6 @@
         <img src="Images/image 10.png" alt="">
     </div>
     <script>
-        // setTimeout(console.log("test"), 5000);
-
-
         function removeSide() {
             document.getElementById("sidebarCard").style.display = "none";
             setTimeout(function () {
@@ -463,9 +460,8 @@
             }, 5000);
         }
         function makeSolid() {
-            document.getElementById("solid_heart").style.transform = "scale(1.2)"
-            document.getElementById("solid_heart").style.display = "block"
-            document.getElementById("outline_heart").style.display = "none"
+            document.getElementById("solid_heart").classList.toggle("appear");
+            document.getElementById("outline_heart").classList.toggle("remove");
         }
     </script>
 
