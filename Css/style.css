@@ -77,11 +77,12 @@ body {
 .productToggle {
   width: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   gap: 8px;
   height: auto;
   overflow: hidden;
+  margin-top: 30px;
 }
 .productView img {
   max-width: 450px;
@@ -90,6 +91,7 @@ body {
 }
 .productImage {
   display: flex;
+  flex-direction: column-reverse;
   gap: 5px;
   width: fit-content;
   position: sticky;
@@ -714,6 +716,82 @@ input::-webkit-inner-spin-button {
 }
 /* color varient end  */
 
+/* about product section starts */
+.aboutProductsAll {
+  width: 100%;
+  margin-top: 31px;
+}
+.aboutProductTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+}
+.aboutproductdetailandImage {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.aboutproductdetailtext {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.aboutproductdetailname {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+.aboutproductdetailbrief {
+  font-size: 14px;
+  line-height: 150%;
+  color: #495057;
+}
+.aboutproductimagegallery {
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.aboutproductimagestoggle {
+  width: 90px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+.abouttoggle {
+  background-image: url(../Images/2cm-felt-balls.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+.aboutActive {
+  border: 1px solid #265c81;
+}
+.aboutpoductmainimage {
+  background-image: url("../Images/productimage.png");
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+/* about product section ends */
+
 /* sidebar animation card start  */
 .sidebarCard {
   position: absolute;
@@ -807,6 +885,9 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-direction: row;
   }
+  .selectPieces {
+    display: flex;
+  }
 }
 @media (max-width: 1030px) {
   .contentWrap {
@@ -852,6 +933,35 @@ input::-webkit-inner-spin-button {
   }
   .desktopViewTitle {
     display: none;
+  }
+}
+@media (max-width: 900px) {
+  .aboutproductdetailandImage {
+    flex-direction: column;
+  }
+  .aboutproductdetailtext {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .aboutproductimagegallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutproductimagestoggle {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (max-width: 400px) {
+  .abouttoggle {
+    width: 30px;
+    height: 30px;
+  }
+  .aboutpoductmainimage {
+    width: 300px;
+    height: 300px;
   }
 }
 @media (max-width: 460px) {
