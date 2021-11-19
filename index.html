@@ -43,30 +43,51 @@
                 <div class="heroWrap">
                     <div class="productImage">
                         <div class="productToggle">
-                            <div class="toggle1 activeToggle" style="background-image: url(Images/productimage.png);">
+                            <div id="toggle1" class="toggle1 activeToggle"
+                                style="background-image: url(Images/productimage.png);"
+                                onmouseenter="changeProduct(id)">
                             </div>
-                            <div class="toggle1" style="background-image: url(Images/35cm-felt-oval-balls\ \(1\).jpg);">
+                            <div id="toggle2" class="toggle1"
+                                style="background-image: url(Images/35cm-felt-oval-balls\ \(1\).jpg);"
+                                onmouseenter="changeProduct(id)">
                             </div>
-                            <div class="toggle1" style="background-image: url(Images/35cm-felt-oval-balls\ \(2\).jpg);">
+                            <div id="toggle3" class="toggle1"
+                                style="background-image: url(Images/35cm-felt-oval-balls\ \(2\).jpg);"
+                                onmouseenter="changeProduct(id)">
                             </div>
-                            <div class="toggle1" style="background-image: url(Images/35cm-felt-oval-balls.jpg);"></div>
-                            <div class="toggle1" style="background-image: url(Images/2cm-felt-balls.jpg);">
+                            <div id="toggle4" class="toggle1"
+                                style="background-image: url(Images/35cm-felt-oval-balls.jpg);"
+                                onmouseenter="changeProduct(id)"></div>
+                            <div id="toggle5" class="toggle1" style="background-image: url(Images/2cm-felt-balls.jpg);"
+                                onmouseenter="changeProduct(id)">
                             </div>
 
                         </div>
                         <div class="productView">
-                            <img src="Images/productimage.png" alt="" srcset="">
+                            <img id="productView" src="Images/productimage.png" alt="" srcset="">
                         </div>
                     </div>
                 </div>
                 <div class="secondaryHero">
                     <span class="secondaryHeroTitle">People have also bought this product</span>
                     <div class="buyThisProduct">
-                        <div class="buyProduct"></div>
+                        <div class="buyRelatableProductCard">
+                            <div class="buyProduct"></div>
+                            <span class="buyProductSingleName">1cm Felt Balls</span>
+                            <span class="buyProductSinglePrice">$30</span>
+                        </div>
                         <span class="mathsSign">+</span>
-                        <div class="buyProduct"></div>
+                        <div class="buyRelatableProductCard">
+                            <div class="buyProduct"></div>
+                            <span class="buyProductSingleName">1cm Felt Balls</span>
+                            <span class="buyProductSinglePrice">$30</span>
+                        </div>
                         <span class="mathsSign">+</span>
-                        <div class="buyProduct"></div>
+                        <div class="buyRelatableProductCard">
+                            <div class="buyProduct"></div>
+                            <span class="buyProductSingleName">1cm Felt Balls</span>
+                            <span class="buyProductSinglePrice">$30</span>
+                        </div>
                         <span class="mathsSign">=</span>
                         <div class="buyProductPrice">
                             <span class="buyTotalPrice">Total Price</span>
@@ -221,6 +242,7 @@
                         <li>In publishing and graphic design, Lorem ipsum is a placeholder text </li>
                     </ul>
                 </div>
+                <!-- add FAQ here  -->
             </div>
             <div class="procuctCTA">
                 <div class="socialWrap">
@@ -235,8 +257,13 @@
                     <span>$30 <b>&</b> <span class="freereturns">Free Returns</span></span>
                     <div class="delivery">
                         <i class="fas fa-truck"></i>
-                        <span>Arrives by <strong>Oct. 29 - 31</strong> </span>
+                        <span>Free delivery <strong>Oct. 29 - 31</strong> </span>
                     </div>
+
+                </div>
+                <div class="buyWithinOneHr">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Fast delivery <strong>Oct. 29 - 31</strong> </span>
                 </div>
                 <div class="CTAbtn">
                     <div class="addToCart">Add to cart</div>
@@ -258,10 +285,17 @@
                     <i class="fas fa-store"></i>
                     <span><strong>70</strong> Left Quantity</span>
                 </div>
-                <div class="buyWithinOneHr">
+                <div class="returnPolicy">
+                    <a href="#" style="text-decoration: none;">
+                        <span class="returnPolicyLink">
+                            Please read the return policy
+                        </span>
+                    </a>
+                </div>
+                <!-- <div class="buyWithinOneHr">
                     <i class="fas fa-shipping-fast"></i>
                     <span>Buy this product within 1 hr and get fast delivery</span>
-                </div>
+                </div> -->
                 <div class="addToWishlist">
                     <span class="wishlistbtn" onclick="makeSolid()">
                         <i id="outline_heart" class="far fa-heart"></i>
@@ -274,7 +308,9 @@
         </div>
         <div class="relatedProducts">
             <span class="relatedProductsTitle">Related Products</span>
-            <div class="relatedProductsCardsWrap">
+            <div class="relatedProductsCardsWrap" id="relatedProductsCardsWrap">
+                <div class="leftBtn_RelatedProducts" id="leftBtn_RelatedProducts"><i class="fas fa-chevron-left"></i>
+                </div>
                 <div class="relatedProductCard">
                     <div class="relatedProductImage"
                         style="background-image: url(Images/35cm-felt-oval-balls\ \(4\).jpg);">
@@ -288,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relatedProductCard">
+                <div id="relatedProductCard" class="relatedProductCard">
                     <div class="relatedProductImage"
                         style="background-image: url(Images/35cm-felt-oval-balls\ \(4\).jpg);"></div>
                     <span class="relatedProductPrice">$25.00</span>
@@ -300,7 +336,55 @@
                         </div>
                     </div>
                 </div>
-                <div class="relatedProductCard">
+                <div id="relatedProductCard" class="relatedProductCard">
+                    <div class="relatedProductImage"
+                        style="background-image: url(Images/35cm-felt-oval-balls\ \(4\).jpg);"></div>
+                    <span class="relatedProductPrice">$25.00</span>
+                    <span class="relatedProductName">1cm felt ball</span>
+                    <div class="relatedProductButtenWrap">
+                        <div class="relatedProductBtn">
+                            <i class="far fa-shopping-cart"></i>
+                            <span>Add To Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="relatedProductCard" class="relatedProductCard">
+                    <div class="relatedProductImage"
+                        style="background-image: url(Images/35cm-felt-oval-balls\ \(4\).jpg);"></div>
+                    <span class="relatedProductPrice">$25.00</span>
+                    <span class="relatedProductName">1cm felt ball</span>
+                    <div class="relatedProductButtenWrap">
+                        <div class="relatedProductBtn">
+                            <i class="far fa-shopping-cart"></i>
+                            <span>Add To Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="relatedProductCard" class="relatedProductCard">
+                    <div class="relatedProductImage"
+                        style="background-image: url(Images/35cm-felt-oval-balls\ \(4\).jpg);"></div>
+                    <span class="relatedProductPrice">$25.00</span>
+                    <span class="relatedProductName">1cm felt ball</span>
+                    <div class="relatedProductButtenWrap">
+                        <div class="relatedProductBtn">
+                            <i class="far fa-shopping-cart"></i>
+                            <span>Add To Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="relatedProductCard" class="relatedProductCard">
+                    <div class="relatedProductImage"
+                        style="background-image: url(Images/35cm-felt-oval-balls\ \(4\).jpg);"></div>
+                    <span class="relatedProductPrice">$25.00</span>
+                    <span class="relatedProductName">1cm felt ball</span>
+                    <div class="relatedProductButtenWrap">
+                        <div class="relatedProductBtn">
+                            <i class="far fa-shopping-cart"></i>
+                            <span>Add To Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="relatedProductCard" class="relatedProductCard">
                     <div class="relatedProductImage" style="background-image: url(Images/felt-stones\ \(1\).jpg);">
                     </div>
                     <span class="relatedProductPrice">$25.00</span>
@@ -312,7 +396,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relatedProductCard">
+                <div id="relatedProductCard" class="relatedProductCard">
                     <div class="relatedProductImage" style="background-image: url(Images/felt-stones\ \(1\).jpg);">
                     </div>
                     <span class="relatedProductPrice">$25.00</span>
@@ -324,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relatedProductCard">
+                <div id="relatedProductCard" class="relatedProductCard">
                     <div class="relatedProductImage" style="background-image: url(Images/felt-stones\ \(1\).jpg);">
                     </div>
                     <span class="relatedProductPrice">$25.00</span>
@@ -336,7 +420,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relatedProductCard">
+                <div id="relatedProductCard" class="relatedProductCard">
                     <div class="relatedProductImage" style="background-image: url(Images/felt-stones\ \(1\).jpg);">
                     </div>
                     <span class="relatedProductPrice">$25.00</span>
@@ -348,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relatedProductCard">
+                <div id="relatedProductCard" class="relatedProductCard">
                     <div class="relatedProductImage" style="background-image: url(Images/felt-stones\ \(1\).jpg);">
                     </div>
                     <span class="relatedProductPrice">$25.00</span>
@@ -360,7 +444,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relatedProductCard">
+                <div id="relatedProductCard" class="relatedProductCard">
                     <div class="relatedProductImage" style="background-image: url(Images/felt-stones\ \(1\).jpg);">
                     </div>
                     <span class="relatedProductPrice">$25.00</span>
@@ -371,6 +455,8 @@
                             <span>Add To Cart</span>
                         </div>
                     </div>
+                </div>
+                <div class="rightBtn_RelatedProducts" id="rightBtn_RelatedProducts"><i class="fas fa-chevron-right"></i>
                 </div>
 
             </div>
@@ -406,13 +492,13 @@
                         scelerisque augue non ac.</span>
                 </span>
                 <div class="aboutproductimagegallery">
-                    <div class="aboutproductimagestoggle">
+                    <!-- <div class="aboutproductimagestoggle">
                         <div class="abouttoggle aboutActive"></div>
                         <div class="abouttoggle"></div>
                         <div class="abouttoggle"></div>
                         <div class="abouttoggle"></div>
                         <div class="abouttoggle"></div>
-                    </div>
+                    </div> -->
                     <div class="aboutpoductmainimage"></div>
                 </div>
             </div>
@@ -422,7 +508,6 @@
             <div class="writeReviewsSection">
                 <span class="writeReviewExplain">Share your thoughts with other customers</span>
                 <div id="writeReviewField">Write a costumer review</div>
-                <!-- <input type="text" id="writeReviewField" placeholder="Write a costumer review"> -->
             </div>
             <div class="ratingReviewsCollection">
                 <div class="reviewsStarCollection1">
@@ -495,17 +580,88 @@
     <div class="footer">
         <img src="Images/image 10.png" alt="">
     </div>
+
     <script>
+        // -------------------------------------------for notification bar remove on click for five seconds function start--------------------------------------------------
         function removeSide() {
             document.getElementById("sidebarCard").style.display = "none";
             setTimeout(function () {
                 document.getElementById("sidebarCard").style.display = "flex"
             }, 5000);
         }
+        // -------------------------------------------for notification bar remove on click for five seconds function end--------------------------------------------------
+
+
+        // ----------------------------------------------------for add to wish card click to make active function start----------------------------------------------
         function makeSolid() {
             document.getElementById("solid_heart").classList.toggle("appear");
             document.getElementById("outline_heart").classList.toggle("remove");
         }
+        // ----------------------------------------------------for add to wish card click to make active function start----------------------------------------------
+
+
+        // -------------------------------------------for different product image showcase function on toggle button hover start------------------------------------------------------------
+        const changeProduct = (e) => {
+            let imgSrc = document.getElementById(e).style.backgroundImage.slice(4, -1).replace(/"/g, "");
+            document.getElementById("productView").src = imgSrc;
+        }
+        // ------------------------------------------for different product image showcase function on toggle button hover end-------------------------------------------------------------
+
+
+        // -----------------------------------------for product image toggle section active class adding function start--------------------------------------------------------------
+        let allToggles = Array.from(document.querySelectorAll('.toggle1'));
+        allToggles.forEach(node => {
+            node.addEventListener('mouseenter', function (e) {
+                allToggles.forEach(node => {
+                    node.classList.remove('activeToggle');
+                });
+                e.currentTarget.classList.add('activeToggle');
+            })
+
+        });
+        // ---------------------------------------for product image toggle section active class adding function end----------------------------------------------------------------
+
+
+        // ---------------------------------------for packet select active class adding function start----------------------------------------------------------------
+        let allPacketToggle = Array.from(document.querySelectorAll('.quantity'));
+        allPacketToggle.forEach(node => {
+            node.addEventListener('click', function (e) {
+                allPacketToggle.forEach(node => {
+                    node.classList.remove('activeQuantity');
+                });
+                e.currentTarget.classList.add('activeQuantity');
+            })
+
+        });
+        // ----------------------------------------------for packet select active class adding function end---------------------------------------------------------
+
+
+        // ------------------------------------------------for related product shift left and right functions start-------------------------------------------------------
+        var content = document.getElementById('relatedProductsCardsWrap');
+        scrollStep = 190;
+        document.getElementById('rightBtn_RelatedProducts').addEventListener('click', function (e) {
+            e.preventDefault();
+            let sl = content.scrollLeft;
+            let cw = content.scrollWidth;
+
+            if ((sl + scrollStep) >= cw) {
+                content.scrollTo(cw, 0);
+            } else {
+                content.scrollTo((sl + scrollStep), 0);
+            }
+        });
+        document.getElementById('leftBtn_RelatedProducts').addEventListener('click', function (e) {
+            e.preventDefault();
+            let sl = content.scrollLeft;
+
+            if ((sl - scrollStep) <= 0) {
+                content.scrollTo(0, 0);
+            } else {
+                content.scrollTo((sl - scrollStep), 0);
+            }
+        });
+        // ------------------------------------------------for related product shift left and right functions end-------------------------------------------------------
+
     </script>
 
 </body>
