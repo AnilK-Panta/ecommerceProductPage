@@ -150,7 +150,8 @@ body {
   background-color: white;
   /* height: fit-content; */
   /* box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08); */
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.08), 0px 1px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 1px 0px #e7eaef;
+  /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.08), 0px 1px 0px rgba(0, 0, 0, 0.08); */
   /* filter: drop-shadow(0px 1px 0px rgba(255, 0, 0, 0.08)); */
   display: flex;
   flex-direction: column;
@@ -184,7 +185,100 @@ body {
   margin-top: 8px;
   cursor: pointer;
 }
-
+.faqSectionAccordance {
+  width: 100%;
+  margin-top: 24px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.animateArrow {
+  animation-name: back;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes back {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.arrowAnimate {
+  animation-name: rotateExpand;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes rotateExpand {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+.faqTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #e7eaef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #265c81;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+.faqQandAs {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: normal;
+  color: #495057;
+  padding: 6px 20px;
+  animation-name: faqCollapse;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+@keyframes faqCollapse {
+  0% {
+    display: block;
+    height: fit-content;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    height: 0px;
+    opacity: 0;
+  }
+}
+.accordanceProp {
+  display: block;
+  background: #ffffff;
+  box-shadow: 0px 1px 0px #e7eaef;
+  overflow: hidden;
+  animation-name: faqExpand;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes faqExpand {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: fit-content;
+    opacity: 1;
+  }
+}
 /* product detail center start  */
 .ProductDetails {
   max-width: 650px;

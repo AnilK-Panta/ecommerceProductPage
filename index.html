@@ -243,6 +243,17 @@
                     </ul>
                 </div>
                 <!-- add FAQ here  -->
+                <div class="faqSectionAccordance">
+                    <span class="faqTitle">
+                        <p>FAQs related to this product</p>
+                        <i class="fas fa-chevron-right animateArrow"></i>
+                    </span>
+                    <div class="faqQandAs">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos nihil nemo cumque quis. Quae
+                        animi deleniti inventore amet. Consectetur quam rerum voluptatem nesciunt at eum nisi molestiae
+                        dolores cupiditate saepe!
+                    </div>
+                </div>
             </div>
             <div class="procuctCTA">
                 <div class="socialWrap">
@@ -662,6 +673,12 @@
         });
         // ------------------------------------------------for related product shift left and right functions end-------------------------------------------------------
 
+
+        // ---------------------------------------------FAQ Accordance on click toggle start-----------------------------------------------------
+        document.querySelector(".faqTitle").addEventListener("click", function () {
+            document.querySelector(".faqQandAs").classList.toggle("accordanceProp");
+            document.querySelector(".animateArrow").classList.toggle("arrowAnimate")
+        })
     </script>
 
 </body>
