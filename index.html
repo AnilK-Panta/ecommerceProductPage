@@ -143,7 +143,8 @@
                             <div class="varientimageHolder" style="background-image: url(Images/825.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -151,7 +152,8 @@
                             <div class="varientimageHolder" style="background-image: url(Images/826.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -159,15 +161,17 @@
                             <div class="varientimageHolder" style="background-image: url(Images/827.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
-                        <div class="colorVarient">
+                        <div class=" colorVarient">
                             <div class="varientimageHolder" style="background-image: url(Images/828.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -175,7 +179,8 @@
                             <div class="varientimageHolder" style="background-image: url(Images/850.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -183,7 +188,8 @@
                             <div class="varientimageHolder" style="background-image: url(Images/851.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -191,7 +197,8 @@
                             <div class="varientimageHolder" style="background-image: url(Images/852.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -199,7 +206,8 @@
                             <div class="varientimageHolder" style="background-image: url(Images/850.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -207,7 +215,8 @@
                             <div class="varientimageHolder" style="background-image: url(Images/825.jpg);"></div>
                             <div class="varientPriceDivider"></div>
                             <div class="chooseVarientPieces">
-                                <input type="number" placeholder="00">
+                                <input id="packetNo" type="number" placeholder="00" value=""
+                                    onchange="giveValue(this.value)">
                             </div>
 
                         </div>
@@ -219,15 +228,18 @@
                 <div class="shortDescription">
                     <span>Description</span>
                     <p>
-                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
+                        demonstrate
                         the visual form of a
-                        document or a typeface without relying on meaningful content. In publishing and graphic design,
+                        document or a typeface without relying on meaningful content. In publishing and graphic
+                        design,
                         Lorem ipsum is a
                         placeholder text commonly used to demonstrate the visual form of a document or a typeface
                         without relying on meaningful
                         content.
 
-                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate
+                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
+                        demonstrate
                         the visual form of a
                         document or a typeface without relying on meaningful content.
                     </p>
@@ -250,7 +262,8 @@
                     </span>
                     <div class="faqQandAs">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos nihil nemo cumque quis. Quae
-                        animi deleniti inventore amet. Consectetur quam rerum voluptatem nesciunt at eum nisi molestiae
+                        animi deleniti inventore amet. Consectetur quam rerum voluptatem nesciunt at eum nisi
+                        molestiae
                         dolores cupiditate saepe!
                     </div>
                 </div>
@@ -275,6 +288,10 @@
                 <div class="buyWithinOneHr">
                     <i class="fas fa-shipping-fast"></i>
                     <span>Fast delivery <strong>Oct. 29 - 31</strong> </span>
+                </div>
+                <div id="packetCalc">
+                    <div id="packetCalcNo">00</div>
+                    <div class="packetCalcText">Packets</div>
                 </div>
                 <div class="CTAbtn">
                     <div class="addToCart">Add to cart</div>
@@ -479,14 +496,18 @@
                     <span class="aboutproductdetailname">1 Felt Ball</span>
                     <span class="aboutproductdetailbrief">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Tortor mi accumsan morbi dictum ullamcorper blandit hac nibh
-                        viverra. Sodales amet, viverra tortor vehicula mauris mauris. Vulputate odio faucibus viverra
+                        viverra. Sodales amet, viverra tortor vehicula mauris mauris. Vulputate odio faucibus
+                        viverra
                         quis imperdiet. Lectus
-                        nulla cursus imperdiet velit mollis in. Vitae interdum tincidunt gravida gravida ante dictum.
+                        nulla cursus imperdiet velit mollis in. Vitae interdum tincidunt gravida gravida ante
+                        dictum.
                         Auctor vitae pellentesque
                         a nibh ipsum placerat sit ut.
-                        Ultrices sed nec aliquam nibh eget ipsum pretium id vel. Magna hendrerit neque mus sit eu morbi
+                        Ultrices sed nec aliquam nibh eget ipsum pretium id vel. Magna hendrerit neque mus sit eu
+                        morbi
                         vulputate ut. Integer
-                        nulla dolor, magna mattis laoreet non. Aenean ipsum, morbi ut nunc et duis. Vel tellus viverra
+                        nulla dolor, magna mattis laoreet non. Aenean ipsum, morbi ut nunc et duis. Vel tellus
+                        viverra
                         consectetur nullam vitae
                         netus sagittis nec faucibus. Nulla purus viverra in nisl aliquam at volutpat sagittis nulla.
                         Vitae amet, pretium neque
@@ -494,10 +515,12 @@
                         leo. Sed massa, et sed eu
                         vitae hendrerit sagittis duis. Vestibulum eget malesuada phasellus sed ac gravida. Dignissim
                         diam, vel lobortis bibendum
-                        enim, dui tortor orci. Neque, vel pharetra risus tempor placerat nec morbi massa hendrerit. A
+                        enim, dui tortor orci. Neque, vel pharetra risus tempor placerat nec morbi massa hendrerit.
+                        A
                         quisque duis quis nec
                         aliquam dui malesuada pretium faucibus.
-                        Consectetur cras a mi ut. Sodales turpis congue imperdiet lectus gravida placerat suspendisse eu
+                        Consectetur cras a mi ut. Sodales turpis congue imperdiet lectus gravida placerat
+                        suspendisse eu
                         id. Nulla egestas
                         posuere massa gravida. Euismod vitae maecenas aliquam diam, aenean auctor. Mauris euismod
                         scelerisque augue non ac.</span>
@@ -535,16 +558,20 @@
                     </div>
                     <div class="reviewCollection1">
                         <span class="reviewTitle">Awesome 😎</span>
-                        <span class="review1">An absolute great purchase! Small enough to fit in my hand and it doesn’t
+                        <span class="review1">An absolute great purchase! Small enough to fit in my hand and it
+                            doesn’t
                             get in the way! I love that I can buy/download
-                            as many PS4 games as my heart desires and it’ll be a long while before the space is filled
+                            as many PS4 games as my heart desires and it’ll be a long while before the space is
+                            filled
                             up!
 
                             Edit 7/21/21: I just wanted to come back and give an update. I just upgraded from
                             PlayStation 4 to PlayStation 5. The
-                            process was made a whole heck of a lot faster and smoother thanks to this little miracle. I
+                            process was made a whole heck of a lot faster and smoother thanks to this little
+                            miracle. I
                             successfully moved over 70
-                            games with absolutely NO problems! NO issues with speed! Once this one is filled up (which
+                            games with absolutely NO problems! NO issues with speed! Once this one is filled up
+                            (which
                             will still be a while) I’ll
                             not hesitate to order another! I still have about a terabyte worth of space left.
                         </span>
@@ -565,16 +592,20 @@
                     </div>
                     <div class="reviewCollection1">
                         <span class="reviewTitle">Awesome 😎</span>
-                        <span class="review1">An absolute great purchase! Small enough to fit in my hand and it doesn’t
+                        <span class="review1">An absolute great purchase! Small enough to fit in my hand and it
+                            doesn’t
                             get in the way! I love that I can buy/download
-                            as many PS4 games as my heart desires and it’ll be a long while before the space is filled
+                            as many PS4 games as my heart desires and it’ll be a long while before the space is
+                            filled
                             up!
 
                             Edit 7/21/21: I just wanted to come back and give an update. I just upgraded from
                             PlayStation 4 to PlayStation 5. The
-                            process was made a whole heck of a lot faster and smoother thanks to this little miracle. I
+                            process was made a whole heck of a lot faster and smoother thanks to this little
+                            miracle. I
                             successfully moved over 70
-                            games with absolutely NO problems! NO issues with speed! Once this one is filled up (which
+                            games with absolutely NO problems! NO issues with speed! Once this one is filled up
+                            (which
                             will still be a while) I’ll
                             not hesitate to order another! I still have about a terabyte worth of space left.
                         </span>
@@ -679,6 +710,22 @@
             document.querySelector(".faqQandAs").classList.toggle("accordanceProp");
             document.querySelector(".animateArrow").classList.toggle("arrowAnimate")
         })
+        // ---------------------------------------------FAQ Accordance on click toggle end-----------------------------------------------------
+
+
+        // ------------------------------------------packet calculation function change start---------------------------------------------------------
+        var lol = 0;
+        function giveValue(e) {
+            lol += +e;
+            document.getElementById("packetCalcNo").innerText = lol
+            console.log(lol)
+        }
+        // let indVal = document.querySelector("#packetNo").value
+
+        // document.getElementById("packetNo").addEventListener("change", function () {
+        //     console.log(indVal)
+        // })
+        // ------------------------------------------packet calculation function change end---------------------------------------------------------
     </script>
 
 </body>
